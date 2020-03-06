@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+    <link rel="stylesheet" href="./css/jquery-ui.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="./js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="./js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="./js/style.js"></script>
+    <title>guide defult</title>
+    <script>
+    //오늘 하루보기 팝업
+    $(document).ready(function(){
+        cookiLoad();
+        $(".btn_pop_close").click(function(){
+            if(document.getElementById("popToday").checked){
+              setCookie( "ncookie", "done" , 24 );
+             }
+            $('#PopExample01').remove();
+        });
+      });
+      //오늘 하루보기 팝업
+      function setCookie( name, value, expirehours ) {
+         var todayDate = new Date();
+         todayDate.setHours( todayDate.getHours() + expirehours );
+         document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+      }
+
+      function cookiLoad(){
+        cookiedata = document.cookie;
+         if (cookiedata.indexOf("ncookie=done") < 0){
+             document.getElementById('PopExample01').style.display = "block";
+         }
+         else {
+             document.getElementById('PopExample01').style.display = "none";
+         }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="wrap">
+      <header id="g_header">
+        <div class="g_h_logo">
+          PUBLISHING ADMIN GUIDE
+        </div>
+        <ul class="g_h_list">
+          <li><a href="./guide.html#con_01">기본 규칙</a></li>
+          <li><a href="./guide.html#con_02">파일 규칙</a></li>
+          <li><a href="./guide.html#con_03">네임 규칙</a></li>
+          <li><a href="./guide.html#_">코드 규칙</a></li>
+          <li><a href="html_guide.html">HTML admin가이드</a></li>
+          <li><a href="ui_guide.html">UI공통 코드</a></li>
+
+        </ul>
+      </header>
+      <div class="g_container">
+        <div class="g_content">
+          <!--_ : UI공통 코드-->
+          <div class="con">
+            <h2 class="title">타이틀</h1>
+
+            <div class="ui_common">
+              <!--_ : UI공통 코드 : 타이틀코드입니다.-->
+              <h1 class="tlt">타이틀태그 h태그입니다.</h1>
+              <h2 class="tlt">타이틀태그 h태그입니다.</h2>
+              <h3 class="tlt">타이틀태그 h태그입니다.</h3>
+              <h4 class="tlt">타이틀태그 h태그입니다.</h4>
+              <h5 class="tlt">타이틀태그 h태그입니다.</h5>
+              <h6 class="tlt">타이틀태그 h태그입니다.</h6>
+            </div>
+            <!--사용코드 -->
+<xmp>
+<h1>타이틀태그 h태그입니다.</h1>
+<h2>타이틀태그 h태그입니다.</h2>
+<h3>타이틀태그 h태그입니다.</h3>
+<h4>타이틀태그 h태그입니다.</h4>
+<h5>타이틀태그 h태그입니다.</h5>
+<h6>타이틀태그 h태그입니다.</h6>
+</xmp>
+          </div>
+
+          <!--_ : UI공통 코드 : 기본폰트입니다..-->
+          <div class="con">
+            <h2 class="title">기본폰트</h1>
+              <!--디자인 시안에 맞춰 나온 ㅈ로 사용하는 font-size, line-height, font-weight css 설정하여 사용합니다
+                  class명은  font_폰트크기 에 맞추어  css 작성해줍니다.
+            -->
+              <ul>
+                <li class="font50" style="margin-bottom:5px;">기본폰트입니다.가나다라</li>
+                <li class="font30" style="margin-bottom:5px;">ABCDE123456!@#$%^</li>
+                <li class="font20" style="margin-bottom:5px;">기본폰트입니다.가나다라ABCDE123456!@#$%^;</li>
+                <li class="font18" style="margin-bottom:5px;">기본폰트입니다.가나다라ABCDE123456!@#$%^;</li>
+                <li class="font14" style="margin-bottom:5px;">기본폰트입니다.가나다라ABCDE123456!@#$%^;</li>
+                <li class="font12" style="margin-bottom:0px;">기본폰트입니다.가나다라ABCDE123456!@#$%^;</li>
+              </ul>
+          </div>
+
+          <div class="con">
+            <h2 class="title">색상</h1>
+              <div class="color_area">
+                <h3 class="title">text color</h3>
+                <ul>
+                  <li class="color00000">사용 색상입니다. 클래스를 이용해주세요</li>
+                  <li class="color33333">사용 색상입니다. 클래스를 이용해주세요</li>
+                  <li class="color55555">사용 색상입니다. 클래스를 이용해주세요</li>
+                  <li class="colorefefef">사용 색상입니다. 클래스를 이용해주세요</li>
+                  <li class="colorBA455B">사용 색상입니다. 클래스를 이용해주세요</li>
+                </ul>
+              </div>
+              <div class="color_area">
+                <h3 class="title">text sub color</h3>
+                <ul>
+                  <li class="color00000">사용 색상입니다. 클래스를 이용해주세요</li>
+                  <li class="color33333">사용 색상입니다. 클래스를 이용해주세요</li>
+                  <li class="color55555">사용 색상입니다. 클래스를 이용해주세요</li>
+                  <li class="colorefefef">사용 색상입니다. 클래스를 이용해주세요</li>
+                  <li class="colorBA455B">사용 색상입니다. 클래스를 이용해주세요</li>
+                </ul>
+              </div>
+              <div class="color_area">
+                <h3 class="title">bg color</h3>
+                <ul>
+
+                  <li class="bg_colorefefef bgcolor">배경사용 색상입니다. 클래스를 이용해주세요</li>
+                  <li class="bg_colorBA455B bgcolor">배경사용 색상입니다. 클래스를 이용해주세요</li>
+                </ul>
+              </div>
+              <div class="color_area">
+                <h3 class="title">button color</h3>
+                <button type="button" class="bg_color999 bgcolor btn_color">버튼색상</button>
+                <button type="button" class="bg_colorBA455B bgcolor btn_color">버튼색상</button>
+              </div>
+
+
+          </div>
+
+          <div class="con">
+            <h2 class="title">탭</h2>
+            <!--_ : UI공통 코드 : 탭코드입니다.-->
+            <!--tab_list_item : 텝 컨텐츠가있는경우 li class / tab_list_item_link : 링크이동인 경우의 li class-->
+            <h3 class="title">탭 : 내용이 있는 경우</h1>
+            <div class="ui_common">
+
+              <div class="tab_area">
+                <ul class="tab_list">
+                  <li class="tab_list_item on" data-tab="tabCon_01">탭1</li>
+                  <li class="tab_list_item" data-tab="tabCon_02">탭2</li>
+                  <li class="tab_list_item" data-tab="tabCon_03">탭3</li>
+                  <li class="tab_list_item" data-tab="tab_">탭4</li>
+                </ul>
+                  <div id="tabCon_01" class="tab_content on">탭1의 컨텐츠</div>
+                  <div id="tabCon_02" class="tab_content">탭2의 컨텐츠</div>
+                  <div id="tabCon_03" class="tab_content">탭3의 컨텐츠</div>
+                  <div id="tab_" class="tab_content">탭4의 컨텐츠</div>
+              </div>
+<xmp>
+<div class="tab_area">
+  <ul class="tab_list">
+    <li class="tab_list_item on" data-tab="tabCon_01">탭1</li>
+    <li class="tab_list_item" data-tab="tabCon_02">탭2</li>
+    <li class="tab_list_item" data-tab="tabCon_03">탭3</li>
+    <li class="tab_list_item" data-tab="tab_">탭4</li>
+  </ul>
+  <div id="tabCon_01" class="tab_content on">탭1의 컨텐츠</div>
+  <div id="tabCon_02" class="tab_content">탭2의 컨텐츠</div>
+  <div id="tabCon_03" class="tab_content">탭3의 컨텐츠</div>
+  <div id="tab_" class="tab_content">탭4의 컨텐츠</div>
+</div>
+</xmp>
+            </div>
+            <h3 class="title">탭 : 링크이동인 경우</h1>
+            <div class="ui_common">
+
+              <div class="tab_area">
+                <ul class="tab_list">
+                  <li class=" tab_list_item_link on"><a href="#">탭1</a></li>
+                  <li class=" tab_list_item_link"><a href="#">탭2</a></li>
+                  <li class=" tab_list_item_link" ><a href="#">탭3</a></li>
+                  <li class=" tab_list_item_link" ><a href="#">탭4</a></li>
+                </ul>
+              </div>
+            </div>
+<xmp>
+<div class="tab_area">
+  <ul class="tab_list">
+    <li class=" tab_list_item_link on"><a href="#">탭1</a></li>
+    <li class=" tab_list_item_link"><a href="#">탭2</a></li>
+    <li class=" tab_list_item_link" ><a href="#">탭3</a></li>
+    <li class=" tab_list_item_link" ><a href="#">탭4</a></li>
+  </ul>
+</div>
+</xmp>
+          </div>
+
+
+          <div class="con">
+            <h2 class="title">input 박스</h2>
+            <div class="ui_common">
+              <!--_ : UI공통 코드 : input코드입니다.-->
+              <!--input_type_01 : 레이블사용 유 / input_type_02 : 레이블사용 무-->
+              <h3 class="title">레이블 표현유무 :유</h3>
+              <div class="input_type_01">
+                <div class="input_tlt">
+                  <label for="inputbox_01">아이디 :</label>
+                  <input type="text" id="name" name="inputbox_01">
+                </div>
+                <div class="input_tlt">
+                  <label for="inputbox_02">비밀번호:</label>
+                  <input type="password" id="password" name="inputbox_02">
+                </div>
+              </div>
+<xmp>
+<div class="input_type_01">
+  <div class="input_tlt">
+    <label for="inputbox_01">아이디 :</label>
+    <input type="text" id="name" name="inputbox_01">
+  </div>
+  <div class="input_tlt">
+    <label for="inputbox_02">비밀번호:</label>
+    <input type="password" id="password" name="inputbox_02">
+  </div>
+</div>
+</xmp>
+              <h3 class="title">레이블 표현유무 :무</h3>
+              <div class="input_type_02">
+                <div class="inputbox">
+                  <label for="inputbox_03">inputbox</label>
+                  <input type="text" id="name" name="inputbox_03" placeholder="입력하세요">
+                </div>
+              </div>
+<xmp>
+<div class="input_type_02">
+  <div class="inputbox">
+    <label for="inputbox_03">inputbox</label>
+    <input type="text" id="name" name="inputbox_03" placeholder="입력하세요">
+  </div>
+</div>
+</xmp>
+            </div>
+          </div>
+
+          <div class="con">
+            <h2 class="title">버튼 타입</h1>
+            <div class="ui_common">
+              <!--_ : UI공통 코드 : button 타입코드입니다.-->
+              <h3 class="title">버튼사이즈 : Small</h3>
+              <button type="button" class="btn btn_fill btn_small">버튼타입_01</button>
+              <button type="button" class="btn btn_line btn_small">버튼타입_02</button>
+              <button type="button" class="btn btn_txt btn_small" >버튼타입_03</button>
+              <button type="button" class="btn btn_icon btn_small"><i class="fab fa-facebook-f"></i>버튼타입_04</button>
+<xmp>
+  class명 추가하여 버튼타입 변경
+  <button type="button" class="btn btn_fill btn_small">버튼타입_01</button>
+  <button type="button" class="btn btn_line btn_small">버튼타입_02</button>
+  <button type="button" class="btn btn_txt btn_small" >버튼타입_03</button>
+  <button type="button" class="btn btn_icon btn_small"><i class="fab fa-facebook-f"></i>버튼타입_04</button>
+</xmp>
+              <h3 class="title">버튼사이즈 : Middle</h3>
+              <button type="button" class="btn btn_fill btn_middle">버튼타입_01</button>
+              <button type="button" class="btn btn_line btn_middle">버튼타입_02</button>
+              <button type="button" class="btn btn_txt btn_middle">버튼타입_03</button>
+              <button type="button" class="btn btn_icon btn_middle">버튼타입_04</button>
+<xmp>
+  <button type="button" class="btn btn_fill btn_middle">버튼타입_01</button>
+  <button type="button" class="btn btn_line btn_middle">버튼타입_02</button>
+  <button type="button" class="btn btn_txt btn_middle">버튼타입_03</button>
+  <button type="button" class="btn btn_icon btn_middle">버튼타입_04</button>
+</xmp>
+              <h3 class="title">버튼사이즈 : Large</h3>
+              <button type="button" class="btn btn_fill btn_large">버튼타입_01</button>
+              <button type="button" class="btn btn_line btn_large">버튼타입_02</button>
+              <button type="button" class="btn btn_txt btn_large">버튼타입_03</button>
+              <button type="button" class="btn btn_icon btn_large">버튼타입_04</button>
+<xmp>
+  <button type="button" class="btn btn_fill btn_large">버튼타입_01</button>
+  <button type="button" class="btn btn_line btn_large">버튼타입_02</button>
+  <button type="button" class="btn btn_txt btn_large">버튼타입_03</button>
+  <button type="button" class="btn btn_icon btn_large">버튼타입_04</button>
+</xmp>
+
+            </div>
+          </div>
+
+          <div class="con">
+            <h2 class="title">테이블 형식</h2>
+            <div class="ui_common">
+              <!--_ : UI공통 코드 : 테이블 형식입니다.-->
+              <!--tbody tr td정렬은 기본 왼쪽 정렬이며 class에 따라 달라집니다. textL:왼쪽 textR:오른쪽 textC:가운데 정렬 -- >
+              <!-- tbl_h : 세로테이블 tbl_v:가로테이블-->
+              <h3 class="title">세로 테이블</h3>
+              <table class="tbl tbl_h">
+                <caption>table코드 : 세로양식입니다</caption>
+                <colgroup>
+                    <col style="width:">
+                    <col style="width:">
+                    <col style="width:">
+                    <col style="width:">
+                    <col style="width:">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>세로타이틀</th>
+                        <th>세로타이틀</th>
+                        <th>세로타이틀</th>
+                        <th>세로타이틀</th>
+                        <th>세로타이틀</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="textC">테이블컨텐츠</td>
+                        <td class="textC">테이블컨텐츠</td>
+                        <td class="textC">테이블컨텐츠</td>
+                        <td class="textC">테이블컨텐츠</td>
+                        <td class="textC">테이블컨텐츠</td>
+                    </tr>
+                    <tr>
+                        <td class="textC">테이블컨텐츠</td>
+                        <td class="textC">테이블컨텐츠</td>
+                        <td class="textC">테이블컨텐츠</td>
+                        <td class="textC">테이블컨텐츠</td>
+                        <td class="textC">테이블컨텐츠</td>
+                    </tr>
+                    <tr>
+                        <td class="textC">테이블컨텐츠</td>
+                        <td class="textC">테이블컨텐츠</td>
+                        <td class="textC">테이블컨텐츠</td>
+                        <td class="textC">테이블컨텐츠</td>
+                        <td class="textC">테이블컨텐츠</td>
+                    </tr>
+                    <tr>
+                        <td class="textC">테이블컨텐츠</td>
+                        <td class="textC">테이블컨텐츠</td>
+                        <td class="textC">테이블컨텐츠</td>
+                        <td class="textC">테이블컨텐츠</td>
+                        <td class="textC">테이블컨텐츠</td>
+                    </tr>
+                    <tr>
+                        <td class="textC">테이블컨텐츠</td>
+                        <td class="textC">테이블컨텐츠</td>
+                        <td class="textC">테이블컨텐츠</td>
+                        <td class="textC">테이블컨텐츠</td>
+                        <td class="textC">테이블컨텐츠</td>
+                    </tr>
+
+                </tbody>
+              </table>
+<xmp>
+<table class="tbl tbl_h">  // tbl_h :세로 테이블 클래스명
+  <caption>table코드 : 세로양식입니다</caption>
+  <colgroup>
+      <col style="width:">
+      <col style="width:">
+      <col style="width:">
+      <col style="width:">
+      <col style="width:">
+  </colgroup>
+  <thead>
+      <tr>
+          <th>세로타이틀</th>
+          <th>세로타이틀</th>
+          <th>세로타이틀</th>
+          <th>세로타이틀</th>
+          <th>세로타이틀</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td class="textC">테이블컨텐츠</td>
+          <td class="textC">테이블컨텐츠</td>
+          <td class="textC">테이블컨텐츠</td>
+          <td class="textC">테이블컨텐츠</td>
+          <td class="textC">테이블컨텐츠</td>
+      </tr>
+      <tr>
+          <td class="textC">테이블컨텐츠</td>
+          <td class="textC">테이블컨텐츠</td>
+          <td class="textC">테이블컨텐츠</td>
+          <td class="textC">테이블컨텐츠</td>
+          <td class="textC">테이블컨텐츠</td>
+      </tr>
+      <tr>
+          <td class="textC">테이블컨텐츠</td>
+          <td class="textC">테이블컨텐츠</td>
+          <td class="textC">테이블컨텐츠</td>
+          <td class="textC">테이블컨텐츠</td>
+          <td class="textC">테이블컨텐츠</td>
+      </tr>
+      <tr>
+          <td class="textC">테이블컨텐츠</td>
+          <td class="textC">테이블컨텐츠</td>
+          <td class="textC">테이블컨텐츠</td>
+          <td class="textC">테이블컨텐츠</td>
+          <td class="textC">테이블컨텐츠</td>
+      </tr>
+      <tr>
+          <td class="textC">테이블컨텐츠</td>
+          <td class="textC">테이블컨텐츠</td>
+          <td class="textC">테이블컨텐츠</td>
+          <td class="textC">테이블컨텐츠</td>
+          <td class="textC">테이블컨텐츠</td>
+      </tr>
+
+  </tbody>
+</table>
+</xmp>
+              <h3 class="title">가로 테이블</h3>
+              <table class="tbl tbl_v">
+                <caption>table코드 : 가로양식입니다</caption>
+                <colgroup>
+                    <col style="width:">
+                    <col style="width:">
+                    <col style="width:">
+                    <col style="width:">
+                </colgroup>
+                <thead>
+                </thead>
+                <tbody>
+                    <tr>
+                      <th>가로테이블</th>
+                      <td>가로테이블컨텐츠</td>
+                      <th>가로테이블</th>
+                      <td>가로테이블컨텐츠</td>
+                    </tr>
+                    <tr>
+                      <th>가로테이블</th>
+                      <td>가로테이블컨텐츠</td>
+                      <th>가로테이블</th>
+                      <td>가로테이블컨텐츠</td>
+                    </tr>
+                    <tr>
+                      <th>가로테이블</th>
+                      <td>가로테이블컨텐츠</td>
+                      <th>가로테이블</th>
+                      <td>가로테이블컨텐츠</td>
+                    </tr>
+                    <tr>
+                      <th colspan="2">가로테이블</th>
+                      <td colspan="2">가로테이블컨텐츠</td>
+                    </tr>
+                    <tr>
+                      <th rowspan="2">가로테이블</th>
+                      <td colspan="3">가로테이블컨텐츠</td>
+                    </tr>
+                    <tr>
+                      <td colspan="3">가로테이블컨텐츠</td>
+                    </tr>
+                </tbody>
+              </table>
+<xmp>
+  <table class="tbl tbl_v"> //tbl_v 가로테이블 클래스명
+    <caption>table코드 : 가로양식입니다</caption>
+    <colgroup> //셀 너비값 지정
+        <col style="width:">
+        <col style="width:">
+        <col style="width:">
+        <col style="width:">
+    </colgroup>
+    <thead>
+    </thead>
+    <tbody>
+        <tr>
+          <th>가로테이블</th>
+          <td>가로테이블컨텐츠</td>
+          <th>가로테이블</th>
+          <td>가로테이블컨텐츠</td>
+        </tr>
+        <tr>
+          <th>가로테이블</th>
+          <td>가로테이블컨텐츠</td>
+          <th>가로테이블</th>
+          <td>가로테이블컨텐츠</td>
+        </tr>
+        <tr>
+          <th>가로테이블</th>
+          <td>가로테이블컨텐츠</td>
+          <th>가로테이블</th>
+          <td>가로테이블컨텐츠</td>
+        </tr>
+        <tr>
+          <th colspan="2">가로테이블</th>
+          <td colspan="2">가로테이블컨텐츠</td>
+        </tr>
+        <tr>
+          <th rowspan="2">가로테이블</th>
+          <td colspan="3">가로테이블컨텐츠</td>
+        </tr>
+        <tr>
+          <td colspan="3">가로테이블컨텐츠</td>
+        </tr>
+    </tbody>
+  </table>
+</xmp>
+            </div>
+          </div>
+
+          <div class="con">
+            <h2 class="title">textarea</h2>
+            <div class="ui_common">
+              <!--_ : UI공통 코드 : textarea코드입니다.-->
+              <textarea name="" class="txtarea" id="" rows="10"></textarea>
+<xmp>
+  <textarea name="" class="txtarea" id="" cols="30" rows="10"></textarea>
+  //row: 줄수 ex 10 : 10줄을 쓸 수 있는 높이
+</xmp>
+            </div>
+
+
+          </div>
+          <!--_ : UI공통 코드 : 리스트 뷰코드입니다.-->
+          <div class="con">
+            <h2 class="title">List view</h2>
+            <div class="ui_common">
+              <div class="list_view">
+                <div class="list_view_tlt">
+                  <div class="num">05</div>
+                  <div class="tlt">리스트 뷰 타이틀입니다.</div>
+                </div>
+                <div class="list_view_con">
+                  내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.
+                  내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.
+                  내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.
+                </div>
+
+              </div>
+<xmp>
+  <div class="list_view">
+    <div class="list_view_tlt">
+      <div class="num">05</div>
+      <div class="tlt">리스트 뷰 타이틀입니다.</div>
+    </div>
+    <div class="list_view_con">
+      내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.
+      내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.
+      내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.
+    </div>
+
+  </div>
+</xmp>
+            </div>
+          </div>
+
+          <div class="con">
+            <h2 class="title">셀렉트박스, 파일찾기, 검색어 , 데이트피커, 라디오버튼, 셀렉트버튼, 이메일폼, 주소폼</h2>
+            <div class="ui_common">
+
+              <h3 class="title">가로 테이블</h3>
+              <table class="tbl tbl_v">
+                <caption>table코드 : 가로양식입니다</caption>
+                <colgroup>
+                    <col style="width:15%">
+                    <col style="width:">
+                    <col style="width:15%">
+                    <col style="width:">
+                </colgroup>
+                <thead>
+                </thead>
+                <tbody>
+                    <tr>
+                      <th>날짜</th>
+                      <td colspan="3">
+                        <p class="datepicker"><input type="text" id="datepicker"></p> ~ <p class="datepicker"><input type="text" id="datepicker2"></p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>파일찾기</th>
+                      <td colspan="3">
+                        <div class="filebox">
+                          <input class="upload-name" value="파일선택" disabled="disabled">
+                           <label for="ex_filename">업로드</label>
+                           <input type="file" id="ex_filename" class="upload-hidden">
+                         </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>이메일</th>
+                      <td colspan="3">
+                        <div class="input_type_02">
+                          <div class="inputbox w150">
+                            <label for="inputbox_03">inputbox</label>
+                            <input type="text" id="name" name="inputbox_03" placeholder="입력하세요">
+                          </div> @
+                          <div class="inputbox w150">
+                            <label for="inputbox_03">inputbox</label>
+                            <input type="text" id="name" name="inputbox_03" placeholder="직접입력">
+                          </div>
+                        </div>
+                        <div class="select_box w150 mar_rl_05">
+                          <select>
+                            <option selected="">옵션입니다 _01</option>
+                            <option>옵션입니다 _02</option>
+                            <option>옵션입니다 _03</option>
+                          </select>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>주소</th>
+                      <td colspan="3">
+                        <div class="address_wrap">
+                          <div class="address_area">
+                            <div class="input_type_02">
+                              <div class="inputbox w100">
+                                <label for="inputbox_03">inputbox</label>
+                                <input type="text" id="name" name="inputbox_03" placeholder="입력하세요">
+                              </div>
+                            </div>
+                            <button type="button" class="btn btn_fill btn_addr">주소검색</button>
+                          </div>
+                          <div class="address_area">
+                            <div class="input_type_02">
+                              <div class="inputbox w300">
+                                <label for="inputbox_03">inputbox</label>
+                                <input type="text" id="name" name="inputbox_03" placeholder="">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="address_area">
+                            <div class="input_type_02">
+                              <div class="inputbox w300">
+                                <label for="inputbox_03">inputbox</label>
+                                <input type="text" id="name" name="inputbox_03" placeholder="상세주소를 입력하세요">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th>체크박스</th>
+                      <td colspan="3">
+                        <div class="ctm_check">
+                          <input type="checkbox" name="checkboxbtn" id="chkbtn_01" value="chkbtn_01" ><label for="chkbtn_01"><span>chkbtn_01</span></label>
+                        </div>
+                        <div class="ctm_check">
+                          <input type="checkbox" name="checkboxbtn" id="chkbtn_02" value="chkbtn_02" ><label for="chkbtn_02"><span>chkbtn_02</span></label>
+                        </div>
+                        <div class="ctm_check">
+                          <input type="checkbox" name="checkboxbtn" id="chkbtn_03" value="chkbtn_03" checked><label for="chkbtn_03"><span>chkbtn_03</span></label>
+                        </div>
+                        <div class="ctm_check">
+                          <input type="checkbox" name="checkboxbtn" id="chkbtn_04" value="chkbtn_04" disabled><label for="chkbtn_04"><span class="check_disabled">chkbtn_01</span></label>
+                        </div>
+
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>라디오버튼</th>
+                      <td colspan="3">
+                        <div class="ctm_radio">
+                          <input type="radio" name="radiobtn" id="radiobtn_01" value="radiobtn_01" checked><label for="radiobtn_01"><span>radiobtn_01</span></label>
+                        </div>
+                        <div class="ctm_radio">
+                          <input type="radio" name="radiobtn" id="radiobtn_02" value="radiobtn_01" checked><label for="radiobtn_02"><span></span>radiobtn_02</label>
+                        </div>
+                        <div class="ctm_radio">
+                          <input type="radio" name="radiobtn" id="radiobtn_03" value="radiobtn_01" checked><label for="radiobtn_03"><span></span>radiobtn_02</label>
+                        </div>
+                        <div class="ctm_radio">
+                          <input type="radio" name="radiobtn" id="radiobtn_03" value="radiobtn_01" disabled><label for="radiobtn_03"><span class="radio_disabled"></span>radiobtn_02</label>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>텍스트입력</th>
+                      <td>가로테이블컨텐츠</td>
+                      <th>셀렉트박스 너비지정</th>
+                      <td>
+                        <div class="select_box w150">
+                          <select>
+                            <option selected>옵션입니다 _01</option>
+                            <option>옵션입니다 _02</option>
+                            <option>옵션입니다 _03</option>
+                          </select>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>셀렉트박스 비활성</th>
+                      <td>
+                        <div class="select_box">
+                          <select disabled>
+                            <option selected>옵션입니다 _01</option>
+                            <option>옵션입니다 _02</option>
+                            <option>옵션입니다 _03</option>
+                          </select>
+                        </div>
+                      </td>
+                      <th>셀렉트박스</th>
+                      <td>
+                        <div class="select_box">
+                          <select>
+                            <option selected>옵션입니다 _01</option>
+                            <option>옵션입니다 _02</option>
+                            <option>옵션입니다 _03</option>
+                          </select>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>셀렉트박스</th>
+                      <td colspan="3">
+                          <div class="select_box">
+                            <select>
+                              <option selected>옵션입니다 _01</option>
+                              <option>옵션입니다 _02</option>
+                              <option>옵션입니다 _03</option>
+                            </select>
+                          </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>검색어</th>
+                      <td colspan="3">
+                        <div class="input_type_02">
+                          <div class="inputbox">
+                            <label for="inputbox_03">inputbox</label>
+                            <input type="text" id="name" name="inputbox_03" placeholder="입력하세요">
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>메모</th>
+                      <td colspan="3">
+                        <div class="ui_common">
+                          <!--_ : UI공통 코드 : textarea코드입니다.-->
+                          <textarea name="" class="txtarea" id="" cols="30" rows="10"></textarea>
+                        </div>
+                      </td>
+                    </tr>
+                </tbody>
+              </table>
+<xmp>
+  //데이커피커
+  <p class="datepicker"><input type="text" id="datepicker"></p> ~ <p class="datepicker"><input type="text" id="datepicker2"></p>
+  js랑 같이써야합니다. input의 아이디값 유의 js파일에 속성값 설명 명시
+
+
+  //파일찾기
+
+  <div class="filebox">
+    <input class="upload-name" value="파일선택" disabled="disabled">
+     <label for="ex_filename">업로드</label>
+     <input type="file" id="ex_filename" class="upload-hidden">
+   </div>
+
+   //이메일폼
+   <div class="input_type_02">
+     <div class="inputbox w150">
+       <label for="inputbox_03">inputbox</label>
+       <input type="text" id="name" name="inputbox_03" placeholder="입력하세요">
+     </div> @
+     <div class="inputbox w150">
+       <label for="inputbox_03">inputbox</label>
+       <input type="text" id="name" name="inputbox_03" placeholder="직접입력">
+     </div>
+   </div>
+   <div class="select_box w150">
+     <select>
+       <option selected="">옵션입니다 _01</option>
+       <option>옵션입니다 _02</option>
+       <option>옵션입니다 _03</option>
+     </select>
+   </div>
+
+   //주소폼
+   <div class="address_wrap">
+     <div class="address_area">
+       <div class="input_type_02">
+         <div class="inputbox w100">
+           <label for="inputbox_03">inputbox</label>
+           <input type="text" id="name" name="inputbox_03" placeholder="입력하세요">
+         </div>
+       </div>
+       <button type="button" class="btn btn_fill btn_addr">주소검색</button>
+     </div>
+     <div class="address_area">
+       <div class="input_type_02">
+         <div class="inputbox w300">
+           <label for="inputbox_03">inputbox</label>
+           <input type="text" id="name" name="inputbox_03" placeholder="">
+         </div>
+       </div>
+     </div>
+     <div class="address_area">
+       <div class="input_type_02">
+         <div class="inputbox w300">
+           <label for="inputbox_03">inputbox</label>
+           <input type="text" id="name" name="inputbox_03" placeholder="상세주소를 입력하세요">
+         </div>
+       </div>
+     </div>
+   </div>
+
+
+   //커스텀 체크박스
+
+   <div class="ctm_check">
+     <input type="checkbox" name="checkboxbtn" id="chkbtn_02" value="chkbtn_02" ><label for="chkbtn_02"><span>chkbtn_02</span></label>
+   </div>
+
+   <div class="ctm_check">//비활성화
+     <input type="checkbox" name="checkboxbtn" id="chkbtn_02" value="chkbtn_02" disabled><label for="chkbtn_02"><span class="check_disabled">chkbtn_02</span></label>
+   </div>
+   스타일은 css조정 , 백그라운드 이미지만 변경해서 사용하면 됩니다.
+
+
+   //커스텀 라디오버튼
+
+   <div class="ctm_radio">
+     <input type="radio" name="radiobtn" id="radiobtn_02" value="radiobtn_01" checked><label for="radiobtn_02"><span></span>radiobtn_02</label>
+   </div>
+
+   <div class="ctm_radio">//비활성화
+     <input type="radio" name="radiobtn" id="radiobtn_02" value="radiobtn_01" disabled><label for="radiobtn_02"><span class="radio_disabled"></span>radiobtn_02</label>
+   </div>
+   스타일은 css조정 , 백그라운드 이미지만 변경해서 사용하면 됩니다.
+
+
+   //셀렉트박스
+   <div class="select_box">
+     <select>
+       <option selected>옵션입니다 _01</option>
+       <option>옵션입니다 _02</option>
+       <option>옵션입니다 _03</option>
+     </select>
+   </div>
+
+   <div class="select_box">
+     <select disabled> //비활성화
+       <option selected>옵션입니다 _01</option>
+       <option>옵션입니다 _02</option>
+       <option>옵션입니다 _03</option>
+     </select>
+   </div>
+   //너비값은 기본 100% 클래스로 너비값속성 변경
+
+
+
+
+   //검색어
+   <div class="input_type_02">
+     <div class="inputbox">
+       <label for="inputbox_03">inputbox</label>
+       <input type="text" id="name" name="inputbox_03" placeholder="입력하세요">
+     </div>
+   </div>
+   //너비값은 기본 100% 잡혀있습니다. 클래스로 너비값속성 변경
+
+
+</xmp>
+            </div>
+          </div>
+
+          <div class="con">
+            <h2 class="title">세로 테이블 유형</h2>
+            <div class="ui_common">
+
+              <h3 class="title">세로 테이블</h3>
+              <h3 class="tbl_tlt">세로 테이블 타이틀로 쓰입니다 class:tbl_tlt</h3>
+<xmp>
+  //테이블 타이틀
+  <h3 class="tbl_tlt">세로 테이블 타이틀로 쓰입니다 class:tbl_tlt</h3>
+  class:tbl_tlt
+</xmp>
+              <!-- 상단 결과보기 영역-->
+              <div class="tbl_top_box_area mar_td_10">
+                <div class="l_area">
+                  검색결과<strong>15</strong>개
+
+                </div>
+
+                <div class="r_area">
+                  <div class="select_box w100">
+                      <select>
+                        <option selected="">10개보기</option>
+                        <option>20개보기</option>
+                      </select>
+                    </div>
+                    <button type="button" class="btn btn_line btn_small">엑셀다운로드</button>
+                </div>
+              </div>
+              <!-- // 상단 결과보기 영역-->
+
+              <table class="tbl tbl_h">
+                <caption>table코드 : 세로양식입니다</caption>
+                <colgroup>
+                    <col style="width:5%">
+                    <col style="width:15%">
+                    <col style="width:">
+                    <col style="width:10%">
+                    <col style="width:10%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>
+                          <div class="ctm_check">
+                            <input type="checkbox" name="c-check_g" id="c-check" value="c-check"><label for="c-check"><span></span></label>
+                          </div>
+                        </th>
+                        <th>이미지</th>
+                        <th>제목</th>
+                        <th>날짜</th>
+                        <th>버튼</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="textC">
+                          <div class="ctm_check">
+                            <input type="checkbox" name="c-check_g" id="c-check" value="c-check"><label for="c-check"><span></span></label>
+                          </div>
+                        </td>
+                        <td class="textC tbl_h_img">
+                          <div class="tbl_h_img_area">
+                            <img src="./img/img_area.jpg" alt="임시이미지입니다. 이미지영역표시"/>
+                          </div>
+
+                        </td>
+                        <td class="textL">
+                          테이블컨텐츠테이블컨텐츠테이블컨텐츠테이블컨텐츠테이블컨텐츠
+                        </td>
+                        <td class="textC">2020-02-22</td>
+                        <td class="textC">
+                          <div class="tbl_btn_area">
+                            <button type="button" class="btn_intbl">수정</button>
+                            <button type="button" class="btn_intbl">삭제</button>
+                          </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="textC">
+                          <div class="ctm_check">
+                            <input type="checkbox" name="c-check_g" id="c-check" value="c-check"><label for="c-check"><span></span></label>
+                          </div>
+                        </td>
+                        <td class="textC">
+                          <div class="tbl_h_img_area">
+                            <img src="./img/img_area.jpg" alt="임시이미지입니다. 이미지영역표시"/>
+                          </div>
+                        </td>
+                        <td class="textC">테이블컨텐츠</td>
+                        <td class="textC">2020-02-22</td>
+                        <td class="textC">
+                          <div class="tbl_btn_area">
+                            <button type="button" class="btn_intbl">수정</button>
+                            <button type="button" class="btn_intbl">삭제</button>
+                          </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="textC">
+                          <div class="ctm_check">
+                            <input type="checkbox" name="c-check_g" id="c-check" value="c-check"><label for="c-check"><span></span></label>
+                          </div>
+                        </td>
+                        <td class="textC">
+                          <div class="tbl_h_img_area">
+                            <img src="./img/img_area.jpg" alt="임시이미지입니다. 이미지영역표시"/>
+                          </div>
+                        </td>
+                        <td class="textR">테이블컨텐츠</td>
+                        <td class="textC">2020-02-22</td>
+                        <td class="textC">
+                          <div class="tbl_btn_area">
+                            <button type="button" class="btn_intbl">수정</button>
+                            <button type="button" class="btn_intbl">삭제</button>
+                          </div>
+                        </td>
+                    </tr>
+                </tbody>
+              </table>
+              <div class="tbl_bottom_box_area mar_td_10">
+
+                <div class="r_area">
+
+                  <button type="button" class="btn btn_line btn_small">전체삭제</button>
+                  <button type="button" class="btn btn_fill btn_small">선택삭제</button>
+                </div>
+              </div>
+<xmp>
+<!-- 상단 결과보기 영역-->
+<div class="tbl_top_box_area mar_td_10">
+  <div class="l_area"> //l_area : 영역 왼쪽정렬
+    검색결과<strong>15</strong>개
+
+  </div>
+
+  <div class="r_area"> //r_area : 영역 오른쪽 정렬
+    <div class="select_box w100">
+        <select>
+          <option selected="">10개보기</option>
+          <option>20개보기</option>
+        </select>
+      </div>
+      <button type="button" class="btn btn_line btn_small">엑셀다운로드</button>
+  </div>
+</div>
+<!-- // 상단 결과보기 영역-->
+</xmp>
+<xmp>
+//세로테이블안에 이미지 넣기
+<div class="tbl_h_img_area">
+  <img src="./img/img_area.jpg" alt="임시이미지입니다. 이미지영역표시">
+</div>
+</xmp>
+            </div>
+          </div>
+
+          <div class="con">
+            <h2 class="title">버튼영역</h2>
+            <div class="ui_common">
+
+              <h3 class="title">right, center, left</h3>
+              <div class="btn_area textL">
+                <button type="button" class="btn btn_fill btn_large">검색</button>
+                <button type="button" class="btn btn_fill btn_large">초기화</button>
+              </div>
+
+              <div class="btn_area textC">
+                <button type="button" class="btn btn_fill btn_large">검색</button>
+                <button type="button" class="btn btn_fill btn_large">초기화</button>
+              </div>
+              <div class="btn_area textR">
+                <button type="button" class="btn btn_fill btn_large">검색</button>
+                <button type="button" class="btn btn_fill btn_large">초기화</button>
+              </div>
+            </div>
+<xmp>
+  //left
+  <div class="btn_area textL">값을 넣어주세요</div>
+  //center
+  <div class="btn_area textC">값을 넣어주세요</div>
+  //right
+  <div class="btn_area textR">값을 넣어주세요</div>
+</xmp>
+          </div>
+
+
+          <div class="con">
+            <h2 class="title">페이징</h2>
+            <div class="ui_common">
+              <!--페이징영역-->
+              <div class="paging">
+              	<a href="#" class="direction first"><span>처음</span></a>
+              	<a href="#" class="direction prev"><span>이전</span></a>
+              	<a href="#">1</a>
+              	<a href="#">2</a>
+              	<a href="#">3</a>
+              	<a href="#">4</a>
+              	<strong>5</strong>
+              	<a href="#">6</a>
+              	<a href="#">7</a>
+              	<a href="#">8</a>
+              	<a href="#">9</a>
+              	<a href="#" class="direction next"><span>다음</span></a>
+              	<a href="#" class="direction last"><span>끝</span></a>
+              </div>
+              <!--//페이징영역-->
+            </div>
+<xmp>
+  <div class="paging">
+    <a href="#" class="direction first"><span>처음</span></a>
+    <a href="#" class="direction prev"><span>이전</span></a>
+    <a href="#">1</a>
+    <a href="#">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+    <strong>5</strong>
+    <a href="#">6</a>
+    <a href="#">7</a>
+    <a href="#">8</a>
+    <a href="#">9</a>
+    <a href="#" class="direction next"><span>다음</span></a>
+    <a href="#" class="direction last"><span>끝</span></a>
+  </div>
+</xmp>
+          </div>
+
+          <div class="con">
+            <h2 class="title">팝업창</h2>
+            <h3 class="title">1. 홈페이지열었을때 레이어팝업창 : 하루동안보지않기 기능</h3>
+            <div class="ui_common">
+
+              <!--팝업창 : 홈페이지열었을때 레이어팝업창 : 하루동안보지않기 기능-->
+              <div class="popup_layer_area" id="PopExample01" style="width:500px; height:500px; display:none;">
+                  <div id="layerpop01" class="pop_layer" >
+                      <div class="pop_container" >
+                          <div class="pop_conts">
+                              <p class="conts_txt">
+                                팝업내용입니다. 팝업내용입니다.팝업내용입니다. 팝업내용입니다.
+                                팝업내용입니다. 팝업내용입니다.팝업내용입니다. 팝업내용입니다.
+                                팝업내용입니다. 팝업내용입니다.팝업내용입니다. 팝업내용입니다.
+                              </p>
+
+                              <div class="pop_bottom_area">
+                                <div class="l_area">
+
+                                  <div class="ctm_check">
+                                    <input type="checkbox" name="popToday" id="popToday"><label for="popToday"><span>1일 동안 이 창을 표시하지 않음</span></label>
+                                  </div>
+                                </div>
+                                <div class="r_area">
+                                  <button type="button" class="btn_pop_close">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+<xmp>
+  <div class="popup_layer_area" id="PopExample01" style="width:500px; height:500px; display:none;">
+      <div id="layerpop01" class="pop_layer" >
+          <div class="pop_container" >
+              <div class="pop_conts">
+                  <p class="conts_txt">
+                    팝업내용입니다. 팝업내용입니다.팝업내용입니다. 팝업내용입니다.
+                    팝업내용입니다. 팝업내용입니다.팝업내용입니다. 팝업내용입니다.
+                    팝업내용입니다. 팝업내용입니다.팝업내용입니다. 팝업내용입니다.
+                  </p>
+
+                  <div class="pop_bottom_area">
+                    <div class="l_area">
+
+                      <div class="ctm_check">
+                        <input type="checkbox" name="popToday" id="popToday"><label for="popToday"><span>1일 동안 이 창을 표시하지 않음</span></label>
+                      </div>
+                    </div>
+                    <div class="r_area">
+                      <button type="button" class="btn_pop_close">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+
+  <script>
+  //오늘 하루보기 팝업
+  $(document).ready(function(){
+      cookiLoad();
+      $(".btn_pop_close").click(function(){
+          if(document.getElementById("popToday").checked){
+            setCookie( "ncookie", "done" , 24 ); // 24 : 시간작성
+           }
+          $('#PopExample01').remove(); //PopExample01 아이디값 맞춰주기
+      });
+    });
+    //오늘 하루보기 팝업
+    function setCookie( name, value, expirehours ) {
+       var todayDate = new Date();
+       todayDate.setHours( todayDate.getHours() + expirehours );
+       document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+    }
+
+    function cookiLoad(){ //쿠키로드
+      cookiedata = document.cookie;
+       if (cookiedata.indexOf("ncookie=done") < 0){
+           document.getElementById('PopExample01').style.display = "block"; //PopExample01 아이디값 맞춰주기
+       }
+       else {
+           document.getElementById('PopExample01').style.display = "none"; //PopExample01 아이디값 맞춰주기
+       }
+    }
+  </script>
+</xmp>
+            </div>
+            <h3 class="title">2.레이어팝업</h1>
+            <div class="ui_common">
+                <a href="#layer1" class="btn btn_fill btn_small btn_layerpop">일반 팝업레이어</a>
+
+                <div id="layer1" class="pop_modallayer">
+                    <div class="pop_modalcontainer">
+                        <div class="pop_close_area">
+                            <h4 class="pop_tlt">팝업타이틀영역</h4>
+                            <div class="inblock r_area textR">
+                              <a href="#" class="btn_layer_close">Close</a>
+                            </div>
+                        </div>
+                        <div class="pop_modalconts">
+                            <!--content //-->
+                            <p class="ctxt mb20">
+                              팝업내용입니다.팝업내용입니다.팝업내용입니다.팝업내용입니다.팝업내용입니다.
+
+                            </p>
+
+
+                            <!--// content-->
+                        </div>
+                    </div>
+                </div>
+<xmp>
+  <div id="layer1" class="pop_modallayer">
+      <div class="pop_modalcontainer">
+          <div class="pop_close_area">
+              <h4 class="pop_tlt">팝업타이틀영역</h4>
+              <div class="inblock r_area textR">
+                <a href="#" class="btn_layer_close">Close</a>
+              </div>
+          </div>
+          <div class="pop_modalconts">
+              <!--content //-->
+              <p class="ctxt mb20">
+                팝업내용입니다.팝업내용입니다.팝업내용입니다.팝업내용입니다.팝업내용입니다.
+
+              </p>
+
+
+              <!--// content-->
+          </div>
+      </div>
+  </div>
+</xmp>
+                <br/><br/>
+                <a href="#layer2" class="btn btn_fill btn_small btn_layerpop">딤처리 팝업레이어 1</a>
+                <div class="dim_layer">
+                    <div class="dimbg"></div>
+                    <div id="layer2" class="pop_modallayer">
+                        <div class="pop_modalcontainer">
+                            <div class="pop_modalconts">
+                              <div class="pop_close_area">
+                                  <h4 class="pop_tlt">팝업타이틀영역</h4>
+                                  <div class="inblock r_area textR">
+                                    <a href="#" class="btn_layer_close">Close</a>
+                                  </div>
+                              </div>
+                                <!--content //-->
+                                <p class="ctxt mb20">
+                                  팝업내용입니다.팝업내용입니다.팝업내용입니다.팝업내용입니다.팝업내용입니다.
+                                </p>
+                                <!--// content-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+<xmp>
+  <div class="dim_layer">
+      <div class="dimbg"></div>
+      <div id="layer2" class="pop_modallayer">
+          <div class="pop_modalcontainer">
+              <div class="pop_modalconts">
+                <div class="pop_close_area">
+                    <h4 class="pop_tlt">팝업타이틀영역</h4>
+                    <div class="inblock r_area textR">
+                      <a href="#" class="btn_layer_close">Close</a>
+                    </div>
+                </div>
+                  <!--content //-->
+                  <p class="ctxt mb20">
+                    팝업내용입니다.팝업내용입니다.팝업내용입니다.팝업내용입니다.팝업내용입니다.
+                  </p>
+                  <!--// content-->
+              </div>
+          </div>
+      </div>
+  </div>
+</xmp>
+
+            </div>
+
+
+          <div class="con">
+            <h2 class="title">리스트</h2>
+            <div class="ui_common">
+                <div class="list_wrap">
+                  <h3 class="title">순서있는 리스트</h3>
+                  <div class="listtype list_num">
+                    <ol>
+                      <li>순서있는 리스트입니다.</li>
+                      <li>순서있는 리스트입니다.</li>
+                      <li>순서있는 리스트입니다.</li>
+                    </ol>
+                  </div>
+                </div>
+<xmp>
+  //타이틀이 있을떄
+    <h3 class="title">순서있는 리스트</h3>
+    <div class="listtype list_num">
+      <ol>
+        <li>순서있는 리스트입니다.</li>
+        <li>순서있는 리스트입니다.</li>
+        <li>순서있는 리스트입니다.</li>
+      </ol>
+    </div>
+</xmp>
+                <div class="list_wrap">
+                  <h3 class="title">순서없는 리스트</h3>
+                  <div class="listtype list_non">
+                    <ul>
+                      <li>순서없는 리스트입니다.</li>
+                      <li>순서없는 리스트입니다.</li>
+                      <li>순서없는 리스트입니다.</li>
+                    </ul>
+                  </div>
+                </div>
+<xmp>
+  //타이틀이 있을떄
+<h3 class="title">순서없는 리스트</h3>
+<div class="listtype list_non">
+  <ul>
+    <li>순서없는 리스트입니다.</li>
+    <li>순서없는 리스트입니다.</li>
+    <li>순서없는 리스트입니다.</li>
+  </ul>
+</div>
+</xmp>
+                <div class="list_wrap">
+                  <h3 class="title">bullet 스타일 리스트</h3>
+                  <div class="listtype list_dot">
+                    <ul>
+                      <li>bullet 리스트입니다.</li>
+                      <li>bullet 리스트입니다.</li>
+                      <li>bullet 리스트입니다.</li>
+                    </ul>
+                  </div>
+                </div>
+<xmp>
+  //타이틀이 있을떄
+  <h3 class="title">bullet 스타일 리스트</h3>
+  <div class="listtype list_dot">
+    <ul>
+      <li>bullet 리스트입니다.</li>
+      <li>bullet 리스트입니다.</li>
+      <li>bullet 리스트입니다.</li>
+    </ul>
+  </div>
+</xmp>
+            </div>
+          </div>
+
+      </div>
+  </body>
+</html>
